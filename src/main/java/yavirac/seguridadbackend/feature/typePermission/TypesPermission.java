@@ -1,4 +1,4 @@
-package yavirac.seguridadbackend.feature.tiposPermiso;
+package yavirac.seguridadbackend.feature.typePermission;
 
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -14,7 +14,7 @@ import lombok.Data;
 
 @Data
 @Table ("tipos_permiso")
-public class TiposPermiso {
+public class TypesPermission {
     @Id
     @Column ("tipos_permiso_id")
     private long tiposPermisoId;
@@ -28,5 +28,5 @@ public class TiposPermiso {
     private Long usernameId;
 
     @MappedCollection(idColumn = "tipos_permiso_id")
-    private Set<TiposPermission> permissions = new HashSet<>();
+    private Set<TypesPermissionRegistration> permissions = new HashSet<>();
 }

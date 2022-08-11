@@ -1,4 +1,4 @@
-package yavirac.seguridadbackend.feature.tiposPermiso;
+package yavirac.seguridadbackend.feature.typePermission;
 
 import java.util.List;
 
@@ -20,28 +20,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/tipospermiso")
 @CrossOrigin({"*"})
 
-public class TiposPermisoController {
+public class TypesPermissionController {
 
     @Autowired
-    TiposPermisoService tiposPermisoService;
+    TypesPermissionService tiposPermisoService;
 
     //CRUD
 
     //Create
     @PostMapping("/save")
-    public TiposPermiso save(@RequestBody TiposPermiso tiposPermiso){
+    public TypesPermission save(@RequestBody TypesPermission tiposPermiso){
         return tiposPermisoService.save(tiposPermiso);
     }
 
     //Read
     @GetMapping("/{id}")
-    public TiposPermiso findById(@PathVariable long id){
+    public TypesPermission findById(@PathVariable long id){
         return tiposPermisoService.findById(id);
     }
 
     //Update
     @PutMapping("/update")
-    public TiposPermiso update(@RequestBody TiposPermiso tiposPermiso)
+    public TypesPermission update(@RequestBody TypesPermission tiposPermiso)
     {
         return tiposPermisoService.save(tiposPermiso);
     }
@@ -54,12 +54,12 @@ public class TiposPermisoController {
     }
 
     @GetMapping("/findAll")
-    public List<TiposPermiso> findAll(){
+    public List<TypesPermission> findAll(){
         return tiposPermisoService.findAll();
     }
 
     @GetMapping("/findByNombre/{term}")
-    public List<TiposPermiso> findByNombre(@PathVariable String term){
+    public List<TypesPermission> findByNombre(@PathVariable String term){
         return tiposPermisoService.findByNombre(term);
     }
 }

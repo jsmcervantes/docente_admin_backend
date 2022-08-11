@@ -1,4 +1,4 @@
-package yavirac.seguridadbackend.feature.tiposPermiso;
+package yavirac.seguridadbackend.feature.typePermission;
 
 import java.util.List;
 
@@ -6,21 +6,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TiposPermisoService {
+public class TypesPermissionService {
 
     @Autowired
-    TiposPermisoRepository tiposPermisoRepository;
+    TypesPermissionRepository tiposPermisoRepository;
 
-    public TiposPermiso save(TiposPermiso tiposPermiso){
+    public TypesPermission save(TypesPermission tiposPermiso){
 
         return tiposPermisoRepository.save(tiposPermiso);
     }
 
-    public TiposPermiso findById(long id){
-        return tiposPermisoRepository.findById(id).orElse(new TiposPermiso());
+    public TypesPermission findById(long id){
+        return tiposPermisoRepository.findById(id).orElse(new TypesPermission());
     }
 
-    public TiposPermiso update(TiposPermiso tiposPermiso){
+    public TypesPermission update(TypesPermission tiposPermiso){
         return tiposPermisoRepository.save(tiposPermiso);
     }
 
@@ -28,11 +28,11 @@ public class TiposPermisoService {
         tiposPermisoRepository.deleteById(id);
     }
 
-    public List<TiposPermiso> findAll(){
+    public List<TypesPermission> findAll(){
         return tiposPermisoRepository.findAll();
     }
 
-    public List<TiposPermiso> findByNombre(String term){
+    public List<TypesPermission> findByNombre(String term){
         return tiposPermisoRepository.findByNombreLikeIgnoreCase(term+"%");
     }
     
