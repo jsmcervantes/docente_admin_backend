@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+## Administracion Docentes 
+
+- KATHERINE ALEXANDRA COLLAGUAZO SAMPEDRO
+- LIGIA JOSELIN MONTA LLASHAG
+- RUBY OFORIWA BOL QUIÑONEZ
+- JOEL SEBASTIAN CERVANTES MARQUINA
+
+=======
+# Tema
+
+- Administracion Docentes
+>>>>>>> master
