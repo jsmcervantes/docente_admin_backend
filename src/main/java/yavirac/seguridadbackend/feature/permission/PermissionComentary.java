@@ -1,6 +1,6 @@
 package yavirac.seguridadbackend.feature.permission;
 
-import org.springframework.data.annotation.Id;
+
 import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.Data;
