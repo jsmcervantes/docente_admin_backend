@@ -1,4 +1,4 @@
-package yavirac.seguridadbackend.feature.registration;
+package yavirac.seguridadbackend.feature.registry;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.MappedCollection;
@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Data
 @Table("registros")
-public class Registration {
+public class Registry {
 
     @Id
     private long registroId;
@@ -25,7 +25,7 @@ public class Registration {
     private Long usernameId; 
 
     @MappedCollection(idColumn = "registro_id")
-    private Set<RegistrationComentary> comentaries = new HashSet<>();
+    private Set<RegistryComentary> comentaries = new HashSet<>();
     
 }
 

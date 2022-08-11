@@ -1,4 +1,4 @@
-package yavirac.seguridadbackend.feature.registration;
+package yavirac.seguridadbackend.feature.registry;
 
 import java.util.List;
 
@@ -18,28 +18,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/registro")
 @CrossOrigin({"*"})
-public class RegistrationController {
+public class RegistryController {
     
     @Autowired
-    RegistrationService registroService;
+    RegistryService registroService;
 
     //CRUD
 
     //Create
     @PostMapping("/save")
-    public Registration save(@RequestBody Registration registro){
+    public Registry save(@RequestBody Registry registro){
         return registroService.save(registro);
     }
 
     //Read
     @GetMapping("/{id}")
-    public Registration findById(@PathVariable long id){
+    public Registry findById(@PathVariable long id){
         return registroService.findById(id);
     }
 
     //Update
     @PutMapping("/update")
-    public Registration update(@RequestBody Registration registro)
+    public Registry update(@RequestBody Registry registro)
     {
         return registroService.save(registro);
     }
@@ -52,12 +52,12 @@ public class RegistrationController {
     }
 
     @GetMapping("/findAll")
-    public List<Registration> findAll(){
+    public List<Registry> findAll(){
        return registroService.findAll(); 
     }
 
     @GetMapping("/findByUsuario/{term}")
-    public List<Registration> findByUsuario(@PathVariable String term){
+    public List<Registry> findByUsuario(@PathVariable String term){
         return registroService.findByUsuario(term);
     }
 

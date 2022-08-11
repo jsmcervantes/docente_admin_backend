@@ -1,4 +1,4 @@
-package yavirac.seguridadbackend.feature.registration;
+package yavirac.seguridadbackend.feature.registry;
 
 
 
@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id;
 import lombok.Data;
 
 @Data
-public class RegistrationComentary {
+public class RegistryComentary {
     
     @Id
     private long id;

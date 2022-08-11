@@ -1,4 +1,4 @@
-package yavirac.seguridadbackend.feature.registration;
+package yavirac.seguridadbackend.feature.registry;
 
 import java.util.List;
 
@@ -7,23 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RegistrationService {
+public class RegistryService {
 
     @Autowired
-    RegistrationRepository registroRepository;
+    RegistryRepository registroRepository;
 
     //CRUD = Create, Read, Update, Delete
 
-    public Registration save(Registration registro){
+    public Registry save(Registry registro){
 
         return registroRepository.save(registro);
     }
 
-    public Registration findById(long id){
-        return registroRepository.findById(id).orElse(new Registration());
+    public Registry findById(long id){
+        return registroRepository.findById(id).orElse(new Registry());
     }
 
-    public Registration update(Registration person){
+    public Registry update(Registry person){
         return registroRepository.save(person);
     }
 
@@ -31,11 +31,11 @@ public class RegistrationService {
         registroRepository.deleteById(id);
     }
     
-    public List<Registration> findAll(){
+    public List<Registry> findAll(){
         return registroRepository.findAll();
     }
 
-    public List<Registration> findByUsuario(String term){
+    public List<Registry> findByUsuario(String term){
         return registroRepository.findByUsuarioLikeIgnoreCase(term+"%" );
     }
 }
