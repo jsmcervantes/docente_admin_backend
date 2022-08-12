@@ -29,7 +29,7 @@ public class Permission {
     private Timestamp updated;
     private boolean enabled;
     private boolean archived;
-    private Long tipoPermiso_id;
+    private Long tipoPermisoId;
 
     @MappedCollection(idColumn = "permission_id")
     private Set<PermissionComentary> comentaries = new HashSet<>();
